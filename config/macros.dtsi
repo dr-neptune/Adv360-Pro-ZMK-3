@@ -34,3 +34,82 @@
     #binding-cells = <0>;
     bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
   };
+
+macro_ctz: macro_ctz {
+    label = "C-z";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+	= <&macro_press &kp LCTRL>
+	, <&macro_tap &kp Z>
+	, <&macro_release &kp LCTRL>
+	;
+};
+
+mlt: mlt {
+label = "M-<";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+	= <&macro_press &kp LALT>
+	, <&macro_tap &kp LT>
+	, <&macro_release &kp LALT>
+	;
+};
+mgt: mgt {
+    label = "M->";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+	= <&macro_press &kp LALT>
+	, <&macro_tap &kp GT>
+	, <&macro_release &kp LALT>
+	;
+};
+
+cmp: cmp {
+    label = "C-M-p";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+      = <&macro_press &kp LCTL>
+      , <&macro_press &kp LALT>
+      , <&macro_tap &kp P>
+      , <&macro_release &kp LCTL>
+      , <&macro_release &kp LALT>
+      ;
+};
+cmn: cmn {
+    label = "C-M-n";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+      = <&macro_press &kp LCTL>
+      , <&macro_press &kp LALT>
+      , <&macro_tap &kp N>
+      , <&macro_release &kp LCTL>
+      , <&macro_release &kp LALT>
+      ;
+};
+macro_cxo: macro_cxo {
+    label = "C-x-o";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+	= <&macro_press &kp LCTRL>
+	, <&macro_tap &kp X>
+	, <&macro_release &kp LCTRL>
+        , <&macro_tap &kp O>
+	;
+};
+macro_cxp: macro_cxp {
+    label = "C-x-p";
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+	= <&macro_press &kp LCTRL>
+	, <&macro_tap &kp X>
+	, <&macro_release &kp LCTRL>
+        , <&macro_tap &kp P>
+	;
+};
